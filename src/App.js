@@ -1,10 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import Header from './Components/Header';
 
 function App() {
   return (
-   <div>Welcome...</div>
+    <>
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+     <div>Welcome...</div>
+    </>
   );
 }
 
