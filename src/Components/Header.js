@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useConnect } from '@blockstack/connect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faAddressBook } from '@fortawesome/free-solid-svg-icons'
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
 
 const element = <FontAwesomeIcon icon={faAddressBook} />
 
 const Header = () => {
+  
+    const { doOpenAuth } = useConnect();
+    const onClick = () => {
+      doOpenAuth();
+    };
+  
 
   return (
     <>
@@ -32,7 +39,10 @@ const Header = () => {
               </a>
             </div>
             <div>
-              <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Sign In</a>
+            <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                Sign In
+              </a>
+              <button onClick={onClick} className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Register</button>
             </div>
           </div>
       </nav>
