@@ -19,7 +19,7 @@ const App = props => {
     },
     appDetails: {
       name: 'BlockStack Guest Book',
-      icon: window.location.origin + '/register.svg',
+      icon: `${window.location.origin}/register.svg`,
     },
   };
 
