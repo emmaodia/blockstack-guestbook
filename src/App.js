@@ -1,7 +1,5 @@
 import React, { useCallback }  from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-// import Register from './Components/Register';
-// import { appCpnfig } from './assets/constants';
 import { Connect } from '@blockstack/connect';
 import ReactBlockstack, { useBlockstack, didConnect } from 'react-blockstack';
 import { appConfig } from './assets/constants';
